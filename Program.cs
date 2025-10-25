@@ -51,7 +51,7 @@
                     if (seçim == 1283)
                     {
                         Console.WriteLine("admin paneline hoşgeldiniz");
-                        giriş = 2; // Ana döngüyü kırıp admin döngüsüne geç
+                        giriş = 2; 
                         break;
                     }
 
@@ -147,15 +147,15 @@
                     else if (admin_seçim == 2) // ÜRÜN GÜNCELLEME
                     {
                         Console.WriteLine("Güncellemek istediginiz ürünü seçin");
-                        // Mevcut tüm ürünleri listele
+                    
                         for (int i = 0; i < ürün_çeşitleri; i++)
                         {
-                            // 'silinenler' veya 'fiyat!=0' kontrolüne gerek yok
+                       
                             Console.WriteLine((i + 1) + " - " + Malzemeler[i]);
                         }
 
                         int güncelleme_seçim = Convert.ToInt32(Console.ReadLine());
-                        int guncelleme_index = güncelleme_seçim - 1; // 0 tabanlı indekse çevir
+                        int guncelleme_index = güncelleme_seçim - 1; 
 
                         if (guncelleme_index >= 0 && guncelleme_index < ürün_çeşitleri)
                         {
@@ -250,7 +250,7 @@
                     Console.WriteLine("hatalı işlem");
                 }
 
-                Console.WriteLine("Program sonlandı. Kapatmak için bir tuşa basın.");
+               
                 
             }
         }
