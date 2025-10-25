@@ -8,12 +8,11 @@
           
 
 
-                // Dizileri 10 elemanlı olarak başlat
                 String[] Malzemeler = new String[10];
                 int[] Malzeme_fiyatları = new int[10];
                 int[] Malzeme_adetleri = new int[10];
 
-                // Başlangıç ürünlerini ata
+               
                 Malzemeler[0] = "kola";
                 Malzemeler[1] = "fanta"; 
                 Malzemeler[2] = "çikolata";
@@ -26,13 +25,12 @@
                 Malzeme_adetleri[1] = 10;
                 Malzeme_adetleri[2] = 10;
 
-                // ürün_çeşitleri, dizideki gerçek ürün sayısını takip eder
+               
                 int ürün_çeşitleri = 3;
                 int toplam_satış = 0;
                 int bakiye = 100;
 
-                // 'silinenler' değişkeni kaldırıldı, çünkü artık dizide kaydırma yapacağız.
-                // Bu, "boşluk" (null/0) oluşmasını engeller ve sıralamayı düzgün tutar.
+                
 
                 Console.WriteLine("Hoşgeldiniz\n1-Müşteri girişi\n2-Admin panel");
                 int giriş = Convert.ToInt32(Console.ReadLine());
@@ -57,7 +55,7 @@
                         break;
                     }
 
-                    // Çıkış seçeneği
+                    
                     if (seçim == 0)
                     {
                         Console.WriteLine("Çıkış yapılıyor...");
@@ -65,10 +63,10 @@
                         break;
                     }
 
-                    // Kullanıcı seçimini 0 tabanlı indekse çevir
+                  
                     int seçim_index = seçim - 1;
 
-                    // Geçerli bir ürün seçimi mi kontrol et
+                  
                     if (seçim_index >= 0 && seçim_index < ürün_çeşitleri)
                     {
                         if (bakiye >= Malzeme_fiyatları[seçim_index])
@@ -120,7 +118,7 @@
 
                     if (admin_seçim == 1) // YENİ ÜRÜN EKLEME
                     {
-                        // Dizide yer var mı kontrol et
+                        
                         if (ürün_çeşitleri < Malzemeler.Length)
                         {
                             Console.WriteLine("eklemek istediginiz ürün isimi giriniz");
@@ -159,7 +157,6 @@
                         int güncelleme_seçim = Convert.ToInt32(Console.ReadLine());
                         int guncelleme_index = güncelleme_seçim - 1; // 0 tabanlı indekse çevir
 
-                        // Seçimin geçerli olup olmadığını kontrol et
                         if (guncelleme_index >= 0 && guncelleme_index < ürün_çeşitleri)
                         {
                             Console.WriteLine("yeni ürün adı");
@@ -207,10 +204,10 @@
                                 Malzeme_adetleri[i] = Malzeme_adetleri[i + 1];
                             }
 
-                            // Toplam ürün çeşidini bir azalt
+                            
                             ürün_çeşitleri--;
 
-                            // (İsteğe bağlı, temizlik için) Artık kullanılmayan son elemanı temizle
+                            
                             Malzemeler[ürün_çeşitleri] = null;
                             Malzeme_fiyatları[ürün_çeşitleri] = 0;
                             Malzeme_adetleri[ürün_çeşitleri] = 0;
