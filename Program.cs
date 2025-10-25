@@ -225,7 +225,7 @@
                         
                         for (int i = 0; i < ürün_çeşitleri; i++)
                         {
-                            // 'fiyat != 0' kontrolüne gerek kalmadı, çünkü silme işlemi kaydırma yapıyor
+                            
                             Console.WriteLine(Malzemeler[i] + " fiyatı " + Malzeme_fiyatları[i] + " Tl, mevcut stok " + Malzeme_adetleri[i]);
                         }
                     }
