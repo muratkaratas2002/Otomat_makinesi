@@ -245,10 +245,7 @@
                     }
                 }
 
-                if (giriş != 1 && giriş != 2) // Eğer ilk başta geçersiz giriş yapıldıysa
-                {
-                    Console.WriteLine("hatalı işlem");
-                }
+               
 
                
                 
