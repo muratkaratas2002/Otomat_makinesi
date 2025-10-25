@@ -222,8 +222,7 @@
                     else if (admin_seçim == 4) // ÜRÜN LİSTELEME
                     {
                         Console.WriteLine("ürünleriniz");
-                        // Hata düzeltildi: i <= ürün_çeşitleri yerine i < ürün_çeşitleri olmalı
-                        // (çünkü 3 ürün varsa indexler 0, 1, 2'dir)
+                        
                         for (int i = 0; i < ürün_çeşitleri; i++)
                         {
                             // 'fiyat != 0' kontrolüne gerek kalmadı, çünkü silme işlemi kaydırma yapıyor
